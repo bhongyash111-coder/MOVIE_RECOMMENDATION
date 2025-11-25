@@ -1,9 +1,0 @@
-
-# Railway configuration for backend
-[build]
-  builder = "nixpacks"
-
-[deploy]
-  startCommand = "python app.py"
-  restartPolicyType = "on_failure"
-
