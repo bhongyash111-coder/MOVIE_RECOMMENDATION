@@ -104,6 +104,9 @@ git lfs install
 git lfs pull
 ```
 
+**Images Not Loading on Mobile:**
+If movie posters don't show up on mobile data (but work on Wi-Fi), your mobile carrier might be blocking `image.tmdb.org`. Try using Wi-Fi or a VPN.
+
 ## 👨‍💻 Author
 
 **Yash**
