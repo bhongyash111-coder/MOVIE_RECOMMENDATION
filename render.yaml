@@ -3,6 +3,7 @@ services:
   - type: web
     name: movie-recommender-backend
     runtime: python
+    rootDir: backend
     buildCommand: pip install -r requirements.txt
     startCommand: python app.py
     envVars:
@@ -18,6 +19,7 @@ services:
   - type: web
     name: movie-recommender-frontend
     runtime: static
+    rootDir: frontend
     buildCommand: npm install && npm run build
     staticPublishPath: ./build
     routes:
