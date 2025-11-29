@@ -107,6 +107,9 @@ git lfs pull
 **Images Not Loading on Mobile:**
 If movie posters don't show up on mobile data (but work on Wi-Fi), your mobile carrier might be blocking `image.tmdb.org`. Try using Wi-Fi or a VPN.
 
+**Login Disabled on Live Demo:**
+The live demo on Render does not have a persistent database attached. Therefore, **Login and Registration are disabled**. You can still use all recommendation features as a guest. To test authentication, please run the project locally.
+
 ## 👨‍💻 Author
 
 **Yash**

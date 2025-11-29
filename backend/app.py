@@ -46,6 +46,10 @@ def health_check():
 @app.route('/api/register', methods=['POST'])
 def register():
     """Register a new user."""
+    # Check if running on Render without a real DB
+    if os.getenv('RENDER') and 'localhost' in os.getenv('MONGODB_URI', ''):
+        return jsonify({'message': 'Registration is disabled in the live demo (No Database). Please run locally for full features.'}), 503
+
     try:
         data = request.get_json()
         email = data.get('email')
@@ -71,6 +75,10 @@ def register():
 @app.route('/api/login', methods=['POST'])
 def login():
     """Login a user."""
+    # Check if running on Render without a real DB
+    if os.getenv('RENDER') and 'localhost' in os.getenv('MONGODB_URI', ''):
+        return jsonify({'message': 'Login is disabled in the live demo (No Database). Please run locally for full features.'}), 503
+
     try:
         data = request.get_json()
         email = data.get('email')
